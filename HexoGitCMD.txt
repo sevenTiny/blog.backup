@@ -1,0 +1,31 @@
+﻿hexo clean	#清理缓存
+
+hexo generate = hexo g	#生成静态页面至public目录
+
+hexo deploy = hexo d	#发布
+
+hexo server = hexo s #开启预览访问端口（默认端口4000，'ctrl + c'关闭server）
+
+hexo d -g 生成并发布
+
+hexo new "postName" = hexo n "postName"	#新建文章
+
+hexo new page"pageName" #新建页面
+
+
+hexo help # 查看帮助
+
+hexo version #查看Hexo的版本
+
+
+主题更换->
+
+$ git clone https://github.com/wuchong/jacman.git themes/jacman	#安装jacman主题
+修改根目录 _config.yml 配置文件中的theme属性，设置为jacman
+cd themes/jacman
+git pull
+
+
+ABlogs category list
+
+	

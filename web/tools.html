@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="qixiao.ico" type="image/x-icon"/>  
+	<title>qixiao tools</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.top-margin-20{
+			margin-top: 20px;
+		}
+		#result_table,#result_table thead th{
+			text-align: center;
+		}
+		#result_table .td-width-40{
+			width: 40%;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function newGuid()
+		{
+			var guid = "";
+			for (var i = 1; i <= 32; i++){
+				var n = Math.floor(Math.random()*16.0).toString(16);
+				guid +=   n;
+				if((i==8)||(i==12)||(i==16)||(i==20))
+					guid += "-";
+			}
+			return guid;    
+		}
+
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#bt_generate").click(function(){
+				var datetime = new Date();
+				$("#td_guid").html(newGuid());
+				$("#td_timestamp").html(datetime.getTime());
+				$("#td_datetime").html(datetime.toLocaleString());
+			});
+		});
+	</script>
+</head>
+<body class="container">
+	<header class="row">
+		<header class="row">
+			<a href="/" class="col-md-2" style="font-family: SimHei;font-size: 20px;text-align:center;margin-top: 30px;">
+				<span class="glyphicon glyphicon-home"></span>Home
+			</a>
+			<font class="col-md-4 col-md-offset-2" style="font-family: SimHei;font-size: 30px;text-align:center;margin-top: 30px;">
+				<a href="/tools" style="cursor: pointer;">QiXiao - Tools</a>
+			</font>
+		</header>
+		<hr>
+
+		<article class="row">
+			<table class="table table-bordered table-hover" id="result_table">
+				<caption><button class="btn btn-success" id="bt_generate">Generate Result</button></caption>
+				<thead style="background-color: #EAE8E8">
+					<tr>
+						<th class="td-width-40">Type</th>
+						<th>Result</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>GUID</td>
+						<td id="td_guid">--</td>
+					</tr>
+					<tr>
+						<td>TimeStamp</td>
+						<td id="td_timestamp">--</td>
+					</tr>
+					<tr>
+						<td>DateTime</td>
+						<td id="td_datetime">--</td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+	</body>
+	</html>
