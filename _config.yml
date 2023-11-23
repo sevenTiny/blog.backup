@@ -70,7 +70,7 @@ theme: BlueLake
 ## Docs: https://hexo.io/docs/deployment.html	
 deploy:	
   type: git 	
-  repo: https://github.com/sevenTiny/sevenTiny.github.io.git 	
+  repo: git@github.com:sevenTiny/sevenTiny.github.io.git 	
   branch: master	
 
  # head image	
