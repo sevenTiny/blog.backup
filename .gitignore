@@ -1,6 +1,6 @@
 .DS_Store
 *.log
 node_modules/
-# public/
-# themes/
-# .deploy*/
+public/
+themes/
+.deploy*/
