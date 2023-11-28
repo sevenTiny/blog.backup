@@ -195,12 +195,12 @@ friends_link:
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: false
-  app_id: #
-  app_key: #
+  enable: true
+  app_id: liTrSRYtDvAvcjrXlPAT3Hwp-gzGzoHsz #
+  app_key: 1V9zZRRYY3MB2mUiRdooW1ek #
 # Valine配置
 valine:
-  enable: false # 是否启用
+  enable: true # 是否启用
   avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)
   placeholder: 给我的文章加点评论吧~ # placeholder
 
