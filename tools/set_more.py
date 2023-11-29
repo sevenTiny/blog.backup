@@ -32,3 +32,5 @@ for filename in os.listdir(path):
         f.seek(0)
         f.truncate()
         f.write(content)
+
+print('done')
