@@ -2,6 +2,8 @@ import os
 
 path = './source/_posts/'
 
+count = 0
+
 for filename in os.listdir(path):
     # read file content
     with open(os.path.join(path, filename), 'r+', encoding='UTF-8') as f:
@@ -26,11 +28,12 @@ for filename in os.listdir(path):
         if (index > 300 and index < length-1):
             content = content[:index] + '\n\n<!-- more -->' + content[index:]
             print(filename + ' added <!-- more --> at ' + str(index))
-            # print(content)
+            
+            # write file
+            f.seek(0)
+            f.truncate()
+            f.write(content)
+            count += 1
 
-        # write file
-        f.seek(0)
-        f.truncate()
-        f.write(content)
-
-print('done')
+print('Total ' + str(count) + ' posts added <!-- more -->')
+print('[done]')
